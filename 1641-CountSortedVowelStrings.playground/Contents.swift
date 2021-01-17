@@ -31,7 +31,7 @@ func countVowelStrings(_ n: Int) -> Int {
        - With permutations the order is important.
  
       This is a combination problem because the vowels are sorted...
-      ... meanign that when n=2 we care about "ae", but not "ea"
+      ... meaning that when n=2 we care about "ae", but not "ea"
      
      Since we allow repeating vowels our problem is:
         "combination of n objects taken r at a time with repetition"
