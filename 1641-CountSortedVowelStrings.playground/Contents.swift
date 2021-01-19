@@ -66,6 +66,6 @@ print(countVowelStrings(2))
 print(countVowelStrings(33))
 
 /*
- Runtime: 0 ms, faster than 100% of Swift online submissions for Valid Sudoku.
- Memory Usage: 14 MB, less than 16.67% of Swift online submissions for Valid Sudoku.
+ Runtime: 0 ms, Your runtime beats 100.00 % of swift submissions.
+ Memory Usage: 14 MB, Your memory usage beats 16.67 % of swift submissions.
  */
