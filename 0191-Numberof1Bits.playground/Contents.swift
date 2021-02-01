@@ -59,7 +59,7 @@ func hammingWeight(_ n: Int) -> Int {
     return oneCountBrute
      */
     
-    
+    // this is probably what they are looking for    
     var oneCount = 0
     var n = n
     
