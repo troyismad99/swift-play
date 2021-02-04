@@ -189,11 +189,23 @@ public class TreeNode {
 
 func trimBST(_ root: TreeNode?, _ low: Int, _ high: Int) -> TreeNode? {
 
+    // make sure we have a tree
+    guard let treeRoot = root else { return nil }
+    
+    // check if our node is out of bounds
+    if treeRoot.val < low {
+        return trimBST(treeRoot.right, low, high)
+    }
+    else if treeRoot.val > high {
+        return trimBST(treeRoot.left, low, high)
+    }
+
+    // trim both sides
+    treeRoot.right = trimBST(treeRoot.right, low, high)
+    treeRoot.left = trimBST(treeRoot.left, low, high)
     
     return root
 }
-
-
 
 let tree1: TreeNode = TreeNode.init(1)
 tree1.left = TreeNode.init(0)
@@ -223,3 +235,8 @@ let tree5: TreeNode = TreeNode.init(1)
 tree5.right = TreeNode.init(2)
 print(tree5.asString)
 print(trimBST(tree5, 2, 4)!.asString)
+
+/*
+ Runtime: 64 ms Your runtime beats 82.61 % of swift submissions.
+ Memory Usage: 15.5 MB
+ */
